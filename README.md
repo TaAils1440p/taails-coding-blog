@@ -3,7 +3,7 @@
 A **static, vanilla HTML/CSS/JS blog** dedicated to coding tutorials.
 All content is open-source and designed to be easily modifiable by editing the code directly in the GitHub repository.
 
-🔗 **[Live Demo](https://taails1440p.github.io/taails-coding-blog/)**
+🔗 **[Live Demo](https://taails-blog.netlify.app/)**
 
 ---
 
@@ -59,11 +59,6 @@ cd taails-coding-blog
 
 ### 3. Test locally
 Use a local server (e.g., [VS Code Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)) to preview changes.
-
-### 4. Deploy to GitHub Pages
-1. Push your changes to the main branch.
-2. Enable GitHub Pages in your repository settings (use the main branch).
-3. Your blog will be live at https://ur-username.github.io/ur-repo-name/.
 
 ## 📝 License
 This project is open-source and licensed under:
