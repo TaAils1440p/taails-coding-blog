@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Install Oh My Zsh</title>
+        <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+        <header id="header"></header>
+        <main>
+            <article>
+                <h1>How to install <strong>Oh My Zsh</strong></h1>
+                <p class="date">Publish date: 21/06/2025</p>
+                <div class="contenu">
+                    <p>This is a quick tutorial on how to install <strong>Oh My Zsh</strong>.</p>
+                    <h2 id="install">Install</h2>
+                    <h3 id="1-install-zsh">1. Install Zsh</h3>
+                    <p><strong>MacOS :</strong></p>
+                    <pre><code class="lang-bash"><span class="hljs-keyword">brew </span><span class="hljs-keyword">install </span>zsh
+                </code></pre>
+                    <p><strong>Ubuntu/Debian :</strong></p>
+                    <pre><code class="lang-bash">
+sudo apt <span class="hljs-keyword">update</span>
+sudo apt <span class="hljs-keyword">install</span> zsh
+                </code></pre>
+                    <hr>
+                    <h3 id="2-install-oh-my-zsh">2. Install Oh My Zsh</h3>
+                    <pre><code class="lang-bash">sh -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span>
+                </code></pre>
+                    <blockquote>
+                        <p>When asked if you want to change your default shell, say <strong>yes</strong>.</p>
+                    </blockquote>
+                    <hr>
+                    <h3 id="3-install-the-powerlevel10k-theme">3. Install the <strong>Powerlevel10k</strong> theme</h3>
+                    <pre><code class="lang-bash">
+git clone --depth=<span class="hljs-number">1</span> https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/romkatv/</span>powerlevel10k.git 
+<span class="hljs-variable">${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}</span><span class="hljs-regexp">/themes/</span>powerlevel10k
+                </code></pre>
+                    <p>Then edit your <code>~/.zshrc</code> file:</p>
+                    <pre><code class="lang-bash"><span class="hljs-attribute">nano</span> ~/.zshrc
+                </code></pre>
+                    <p>And modify the line:</p>
+                    <pre><code class="lang-zsh"><span class="hljs-attr">ZSH_THEME</span>=<span class="hljs-string">"powerlevel10k/powerlevel10k"</span>
+                </code></pre>
+                    <hr>
+                    <h3 id="4-install-useful-plugins">4. Install useful plugins</h3>
+                    <h4 id="-zsh-syntax-highlighting">✅ Zsh Syntax Highlighting</h4>
+                    <pre><code class="lang-bash">
+git clone <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/zsh-users/zsh-syntax-highlighting.git</span>
+${<span class="hljs-string">ZSH_CUSTOM:</span>-<span class="hljs-regexp">~/.oh-my-zsh/</span>custom}<span class="hljs-regexp">/plugins/</span>zsh-syntax-highlighting
+                </code></pre>
+                    <h4 id="-zsh-autosuggestions">✅ Zsh Autosuggestions</h4>
+                    <pre><code class="lang-bash">
+git clone <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/zsh-users/zsh-autosuggestions </span>
+${<span class="hljs-string">ZSH_CUSTOM:</span>-<span class="hljs-regexp">~/.oh-my-zsh/</span>custom}<span class="hljs-regexp">/plugins/</span>zsh-autosuggestions
+                </code></pre>
+                    <h3 id="5-enable-plugins-in-zshrc-">5. Enable plugins in <code>.zshrc</code></h3>
+                    <p>Still in <code>~/.zshrc</code>, modify the plugins line like this:</p>
+                    <pre><code class="lang-zsh"><span class="hljs-attr">plugins</span>=(git zsh-autosuggestions zsh-syntax-highlighting)
+                </code></pre>
+                    <p>Also add to the end of the file (if it is not already done):</p>
+                    <pre><code class="lang-zsh">
+source ~<span class="hljs-regexp">/.oh-my-zsh/custom</span><span class="hljs-regexp">/plugins/zsh</span>-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~<span class="hljs-regexp">/.oh-my-zsh/custom</span><span class="hljs-regexp">/plugins/zsh</span>-autosuggestions/zsh-autosuggestions.zsh
+                </code></pre>
+                    <hr>
+                    <h3 id="6-install-a-nerd-font-for-powerlevel10k-icons-">6. Install a Nerd Font (for Powerlevel10k icons)</h3>
+                    <p>Go to <a href="https://www.nerdfonts.com/font-downloads">https://www.nerdfonts.com/font-downloads</a> and install a font like:</p>
+                    <ul>
+                        <li><strong>MesloLGS NF</strong> ← recommended for Powerlevel10k</li>
+                    </ul>
+                    <p>Then configure your terminal to use this font.</p>
+                    <hr>
+                    <h3 id="7-reload-configuration">7. Reload configuration</h3>
+                    <pre><code class="lang-bash"><span class="hljs-built_in">source</span> ~/.zshrc
+                </code></pre>
+                    <hr>
+                    <h3 id="8-launch-powerlevel10k-configuration">8. Launch Powerlevel10k configuration</h3>
+                    <p>If it is not launched automatically, force it:</p>
+                    <pre><code class="lang-bash"><span class="hljs-attribute">p10k</span> configure
+                </code></pre>
+                </div>
+            </article>
+        </main>
+        <footer id="footer"></footer>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
