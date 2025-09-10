@@ -16,6 +16,7 @@ fetch('/templates/footer.html')
 // Liste les tutoriels disponibles
 const tutoriels = [
     { titre: "Install Oh My Zsh", fichier: "articles/oh-my-zsh.html" },
+    { titre: "Build a chatbot in python", fichier: "articles/py-chatbot.html" },
     // Copy link and change path/title
 ];
 
